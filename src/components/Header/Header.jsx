@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
   CinestarLogo,
   Popcorn,
@@ -9,12 +9,19 @@ import {
 import Button from "../Button/Button";
 import useWindowSize from "../../hooks/useWindowSize";
 import ComboBox from "../Cbbox/ComboBox";
+import GlobalContext from "../../context/GlobalContext";
+import SearchModal from "../Modal/SearchModal";
 
 const Header = () => {
   const isSmallScreen = useWindowSize();
+  const { isShowModal, setIsShowModal } = useContext(GlobalContext);
+
+  const showModal = () => {
+    setIsShowModal((prev) => !prev);
+  };
 
   return (
-    <div className="bg-cinestar-black flex-wrap py-4 md:lg-5 lg:px-20 border-b border-white fixed w-full left-0">
+    <div className="bg-cinestar-black flex-wrap py-4 xs:px-2 md:px-5 lg:px-20 border-b border-white fixed w-full left-0">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between basis-4/5 gap-3">
           <img src={CinestarLogo} alt="Logo" width={130} height={45} />
@@ -55,8 +62,8 @@ const Header = () => {
             height="24"
             className="bg-white min-w-[80px] w-[125px] h-[40px] button md:hidden"
             text={isSmallScreen ? "" : "Tìm kiếm"}
+            onClick={showModal}
           />
-          {/* Combobox */}
         </div>
         {/* Login */}
         <div className="">
@@ -70,7 +77,8 @@ const Header = () => {
       </div>
 
       {/* Subnav header */}
-
+      {/* Search modal */}
+      <SearchModal />
       <div></div>
     </div>
   );
