@@ -22,6 +22,7 @@ import TagIcon from './tag-icon.svg';
 import TicketIcon from './ticket-icon.svg';
 import UserIcon from './user-icon.svg';
 import ZaloIcon from './zalo-icon.webp';
+import BurgerBar from './burger-bar.png'
 
 
 
@@ -49,5 +50,6 @@ export {
     TagIcon,
     TicketIcon,
     UserIcon,
-    ZaloIcon
+    ZaloIcon,
+    BurgerBar
 }

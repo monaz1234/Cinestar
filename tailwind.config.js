@@ -4,6 +4,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
+    screens: {
+      xs: "375px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     extend: {
       colors: {
         "cinestar-black": "#0f172a", // Màu nền chính
@@ -16,11 +23,15 @@ export default {
     },
   },
   plugins: [
-    plugin(function ({ addBase, addComponents, addUtilities }) {
+    plugin(function ({ addBase, addComponents }) {
       addBase({});
       addComponents({
         ".button": {
-          "@apply text-[14px] font-bold flex rounded-md items-center justify-center cursor-pointer": {},
+          "@apply text-[14px] font-bold flex rounded-md items-center justify-center cursor-pointer":
+            {},
+          ".md:button": {
+            "@apply flex": {},
+          },
         },
       });
     }),
