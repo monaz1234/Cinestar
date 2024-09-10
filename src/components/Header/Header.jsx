@@ -14,27 +14,29 @@ const Header = () => {
   const isSmallScreen = useWindowSize();
 
   return (
-    <div className="bg-cinestar-black flex-wrap py-4 px-2">
+    <div className="bg-cinestar-black flex-wrap py-4 md:lg-5 lg:px-20 border-b border-white fixed w-full left-0">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between basis-4/5 gap-3">
           <img src={CinestarLogo} alt="Logo" width={130} height={45} />
           <div className="flex">
             <Button
               icon={TicketIcon}
-              className="button md:button bg-cinestar-gold w-[125px] h-[40px] mr-3 hidden"
+              className="button md:button bg-cinestar-gold w-[125px] h-[40px] mr-3 hidden group hover:text-white"
               text="Đặt vé ngay"
+              colorChange="bg-cinestar-blue"
             />
             <Button
               icon={Popcorn}
-              className="button md:button bg-cinestar-purple w-[125px] h-[40px] text-white hidden"
+              className="button md:button bg-cinestar-purple w-[125px] h-[40px] text-white hidden group"
               text="Đặt bắp nước"
+              colorChange="bg-cinestar-orange"
             />
           </div>
           {/* Search bar */}
           <div className="relative hidden md:flex items-center">
             <input
               type="text"
-              className="hidden md:block rounded-2xl h-9 pl-3 text-sm w-[280px]"
+              className="hidden md:block rounded-2xl h-10 pl-3 text-sm w-[280px]"
               placeholder="Tìm kiếm"
             />
             <img
@@ -60,7 +62,9 @@ const Header = () => {
         <div className="">
           <a className="text-white flex items-center" href="">
             <img src={UserIcon} alt="user" width={24} height={24} />
-            <span className="ml-2 hidden lg:block">Đăng nhập</span>
+            <span className="ml-2 hidden lg:block hover:text-cinestar-gold hover:transition-all">
+              Đăng nhập
+            </span>
           </a>
         </div>
       </div>

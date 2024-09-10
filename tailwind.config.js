@@ -19,6 +19,7 @@ export default {
         "cinestar-blue": "#0056b3", // Màu xanh
         "cinestar-red": "#e50914", // Màu đỏ
         "cinestar-purple": "#663399", //Màu tím
+        'cinestar-orange': '#FF7201'
       },
     },
   },
@@ -27,7 +28,7 @@ export default {
       addBase({});
       addComponents({
         ".button": {
-          "@apply text-[14px] font-bold flex rounded-md items-center justify-center cursor-pointer":
+          "@apply text-[14px] font-bold flex rounded-md items-center justify-center cursor-pointer relative overflow-hidden":
             {},
           ".md:button": {
             "@apply flex": {},

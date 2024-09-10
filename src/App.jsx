@@ -1,9 +1,11 @@
 import Header from "./components/Header/Header";
+import Slider from "./components/Slider/Slider";
 
 function App() {
   return (
-    <div className="lg:px-20 md:px-5 bg-cinestar-black">
+    <div className="bg-cinestar-black">
       <Header />
+      <Slider />
     </div>
   );
 }
