@@ -11,6 +11,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 import ComboBox from "../Cbbox/ComboBox";
 import GlobalContext from "../../context/GlobalContext";
 import SearchModal from "../Modal/SearchModal";
+import { listTheater, subnav } from "../../constants/header";
 
 const Header = () => {
   const isSmallScreen = useWindowSize();
@@ -21,8 +22,8 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-cinestar-black flex-wrap py-4 xs:px-2 md:px-5 lg:px-20 border-b border-white fixed w-full left-0">
-      <div className="flex items-center justify-between">
+    <div className="bg-cinestar-black flex-wrap py-4 xs:px-2 md:px-5 lg:px-20 fixed w-full left-0">
+      <div className="flex items-center justify-between border-b border-white border-opacity-20 pb-4">
         <div className="flex items-center justify-between basis-4/5 gap-3">
           <img src={CinestarLogo} alt="Logo" width={130} height={45} />
           <div className="flex">
@@ -77,6 +78,30 @@ const Header = () => {
       </div>
 
       {/* Subnav header */}
+      <div className="flex justify-between w-full mt-4">
+        {subnav.map((item, index) => (
+          <div
+            className={`flex font-bold text-white cursor-pointer group hover:text-cinestar-gold hover:transition-all hover:duration-200 ${item.icon ? "after:h-10 after:w-5 after:relative after:left-4 bg-red-700" : ""} `}
+            key={index}
+          >
+            {item.icon && (
+              <item.icon className="w-5 h-5 text-white group-hover:text-cinestar-gold" />
+            )}
+            <span>{item.name}</span>
+
+            {/* Hiển thị listTheater khi hover */}
+            {item.icon && (
+              <div className="hidden group-hover:flex text-white absolute z-10 bg-cinestar-black flex-wrap mt-10 border border-white border-opacity-50 rounded-md w-[90%]">
+                {listTheater.map((theater, theaterIndex) => (
+                  <div key={theaterIndex} className="basis-1/3 px-1 py-2 hover:text-cinestar-gold">
+                    {theater}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
       {/* Search modal */}
       <SearchModal />
       <div></div>

@@ -12,7 +12,6 @@ import HotlineIcon from './hotline-icon.svg';
 import Km1 from './km-1.webp';
 import Km2 from './km-2.webp';
 import Km3 from './km-3.webp';
-import LocationIcon from './location-icon.svg';
 import PlayTrailerIcon from './play-trailer-icon.svg';
 import Popcorn from './popcorn.svg';
 import SearchIcon from './search-icon.svg';
@@ -41,7 +40,6 @@ export {
     Km1,
     Km2,
     Km3,
-    LocationIcon,
     PlayTrailerIcon,
     Popcorn,
     SearchIcon,
