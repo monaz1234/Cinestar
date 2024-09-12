@@ -1,11 +1,11 @@
 import React from "react";
 
-const SelectData = ({ list }) => {
+const SelectData = ({ list, style }) => {
   return (
-    <div>
-      <ul className="w-[150px] bg-gray-100">
+    <div className="relative">
+      <ul className="w-[150px] bg-gray-200 sm:text-[12px] md:text-[13px] lg:text-[14px] absolute" style={style}>
         {list.map((item, index) => (
-          <li key={index} className="list-none hover:bg-gray-300 min-h-[100px]">
+          <li key={index} className="flex justify-center items-center list-none hover:bg-gray-300 min-h-[50px] cursor-pointer">
             {item}
           </li>
         ))}

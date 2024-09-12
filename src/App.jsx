@@ -5,7 +5,7 @@ import Slider from "./components/Slider/Slider";
 
 function App() {
   return (
-    <div className="bg-cinestar-black">
+    <div className="bg-cinestar-black md:px-2">
       <Header />
       <Slider />
       <SearchBox />
