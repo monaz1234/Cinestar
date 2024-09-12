@@ -1,12 +1,10 @@
-import React from 'react'
-import { SliderHomepage } from '../../assets'
+import React from "react";
+import { SliderHomepage } from "../../assets";
 
 const Slider = () => {
-  return (
-    <div className='h-[1000px]'>
-        <img src={SliderHomepage} alt="" />
-    </div>
-  )
-}
+  return <div className="pt-40 pb-20">
+    <img src={SliderHomepage} width={1200} height={400} alt="Banner" className="flex m-auto rounded-md" />
+  </div>;
+};
 
-export default Slider
+export default Slider;

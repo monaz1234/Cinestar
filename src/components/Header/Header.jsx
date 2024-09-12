@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-cinestar-black flex-wrap py-4 xs:px-2 md:px-5 lg:px-20 fixed w-full left-0">
+    <div className="bg-cinestar-black flex-wrap py-4 xs:px-2 md:px-5 lg:px-20 fixed w-full left-0 z-[1000]">
       <div className="flex items-center justify-between border-b border-white border-opacity-20 pb-4">
         <div className="flex items-center justify-between basis-4/5 gap-3">
           <img src={CinestarLogo} alt="Logo" width={130} height={45} />
@@ -78,25 +78,36 @@ const Header = () => {
       </div>
 
       {/* Subnav header */}
-      <div className="flex justify-between w-full mt-4">
+      <div className="flex justify-between w-full mt-4 xs:px-2 md:px-5 lg:p-0">
         {subnav.map((item, index) => (
           <div
-            className={`flex font-bold text-white cursor-pointer group hover:text-cinestar-gold hover:transition-all hover:duration-200 ${item.icon ? "after:h-10 after:w-5 after:relative after:left-4 bg-red-700" : ""} `}
+            className={`flex font-bold text-white cursor-pointer group hover:text-cinestar-gold hover:transition-all hover:duration-200 ${
+              item.icon
+                ? "after:block after:h-10 after:w-24 after:absolute after:top-50"
+                : ""
+            } `}
             key={index}
           >
             {item.icon && (
               <item.icon className="w-5 h-5 text-white group-hover:text-cinestar-gold" />
             )}
-            <span>{item.name}</span>
+            <span className="transition duration-300 group-hover:text-cinestar-gold">
+              {item.name}
+            </span>
 
             {/* Hiển thị listTheater khi hover */}
             {item.icon && (
-              <div className="hidden group-hover:flex text-white absolute z-10 bg-cinestar-black flex-wrap mt-10 border border-white border-opacity-50 rounded-md w-[90%]">
-                {listTheater.map((theater, theaterIndex) => (
-                  <div key={theaterIndex} className="basis-1/3 px-1 py-2 hover:text-cinestar-gold">
-                    {theater}
-                  </div>
-                ))}
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                <div className="hidden group-hover:flex text-white absolute left-[5%] z-10 bg-cinestar-black flex-wrap mt-10 border border-white border-opacity-50 rounded-md w-[90%]">
+                  {listTheater.map((theater, theaterIndex) => (
+                    <div
+                      key={theaterIndex}
+                      className="basis-1/3 px-1 py-4 hover:text-cinestar-gold transition duration-300"
+                    >
+                      {theater}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
