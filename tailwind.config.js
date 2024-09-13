@@ -34,9 +34,9 @@ export default {
             "@apply flex": {},
           },
         },
-        ".select-data": {
-          "@apply font-bold md:text-sm lg:text-[16px] text-cinestar-purple border border-cinestar-purple rounded-md flex items-center md:p-1 lg:p-2 xl:p-3 cursor-pointer": {},
-        }
+        ".select-data-btn": {
+          "@apply border border-cinestar-purple rounded-md text-[16px] flex justify-center p-2 bg-white font-bold cursor-pointer": {},
+        },
       });
     }),
   ],

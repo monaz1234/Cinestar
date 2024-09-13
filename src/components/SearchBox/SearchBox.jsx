@@ -23,17 +23,13 @@ const SearchBox = () => {
     time: false,
   });
 
-  const theaterRef = useRef(null);
-  const filmRef = useRef(null);
-  const dateRef = useRef(null);
-  const timeRef = useRef(null);
-
-
   const selectData = () => {
     // setStatusData((prevState) => ({
     //   // ...prevState, // Giữ lại các giá trị khác trong state
     //   theater: !prevState.theater, // Đảo ngược giá trị theater
     // }));
+    console.log(statusData.theater);
+    
 
     setStatusData((prevState) => ({
       theater: !prevState.theater,
@@ -41,50 +37,52 @@ const SearchBox = () => {
       date: !prevState.date,
       time: !prevState.time,
     }));
-
-    getPosition(theaterRef);
-  };
-
-  const getPosition = (ref) => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      console.log('X:', rect.x, 'Y:', rect.y);
-      console.log('Width:', rect.width, 'Height:', rect.height);
-      console.log('Top:', rect.top, 'Left:', rect.left);
-      return rect.x;
-    }
   };
 
   return (
-    <div>
-      <div className="bg-gray-100 rounded-md hidden md:flex gap-3 p-5 lg:w-[95%] xl:w-[85%] mx-auto justify-between items-center">
-        <div className="font-bold text-[18px] uppercase">Đặt nhanh</div>
-        <div className="select-data" onClick={selectData} ref={theaterRef}>
-          1. Chọn rạp
-          <ChevronDownIcon className="w-4 md:ml-2" />
+    <div className="xl:p-4 lg:p-3 md:p-2 xs:p-1">
+      <div className="relative lg:w-[95%] md:w-[85%] xl:p-4 lg:p-3 md:p-2 xs:p-1 rounded-md grid md:grid-cols-6 items-center gap-4 m-auto bg-blue-100">
+        <div className="text-[18px] uppercase font-extrabold">Đặt nhanh</div>
+        <div className="relative">
+          <div className="select-data-btn" onClick={selectData}>
+            1. Chọn rạp
+            <ChevronDownIcon className="w-4 ml-2" />
+          </div>
+          {/* List */}
+          {statusData.theater && <SelectData list={listTheater} />}
         </div>
-        <div className="select-data" ref={filmRef}>
-          2. Chọn phim
-          <ChevronDownIcon className="w-4 ml-2" />
+        <div className="relative">
+          <div className="select-data-btn">
+            2. Chọn phim
+            <ChevronDownIcon className="w-4 ml-2" />
+          </div>
+          {/* List */}
+          {statusData.film && <SelectData list={listFilm} />}
         </div>
-        <div className="select-data" ref={dateRef}>
-          3. Chọn ngày
-          <ChevronDownIcon className="w-4 ml-2" />
+        <div className="relative">
+          <div className="select-data-btn">
+            3. Chọn ngày
+            <ChevronDownIcon className="w-4 ml-2" />
+          </div>
+          {/* List */}
+          {statusData.date && <SelectData list={listDay} />}
         </div>
-        <div className="select-data" ref={timeRef}>
-          4. Chọn suất
-          <ChevronDownIcon className="w-4 ml-2" />
+        <div className="relative">
+          <div className="select-data-btn">
+            4. Chọn suất
+            <ChevronDownIcon className="w-4 ml-2" />
+          </div>
+          {/* List */}
+          {statusData.time && <SelectData list={listTime} />}
         </div>
+
+        {/* Button booking */}
         <Button
-          className="button md:button bg-cinestar-gold w-[125px] h-[40px] mr-3 group hover:text-white"
           text="Đặt ngay"
+          className="button bg-cinestar-gold w-[125px] h-[40px] mr-3 group hover:text-white"
           colorChange="bg-cinestar-orange"
         />
       </div>
-      {statusData.theater && <SelectData list={listTheater} style={{ marginLeft: `${getPosition(theaterRef)}px` }} />}
-      {statusData.film && <SelectData list={listFilm} style={{ marginLeft: `${getPosition(filmRef)}px` }} />}
-      {statusData.date && <SelectData list={listDay} style={{ marginLeft: `${getPosition(dateRef)}px` }} />}
-      {statusData.time && <SelectData list={listTime} style={{ marginLeft: `${getPosition(timeRef)}px` }} />}
     </div>
   );
 };
