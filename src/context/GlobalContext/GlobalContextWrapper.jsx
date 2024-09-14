@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GlobalContext from "./GlobalContext";
 
-const ContextWrapper = (props) => {
+const GlobalGlobalContextWrapper = (props) => {
   const [isShowModal, setIsShowModal] = useState(false);
 
   return (
@@ -14,4 +14,4 @@ const ContextWrapper = (props) => {
   );
 };
 
-export default ContextWrapper;
+export default GlobalGlobalContextWrapper;

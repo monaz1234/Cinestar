@@ -9,7 +9,7 @@ import {
 import Button from "../Button/Button";
 import useWindowSize from "../../hooks/useWindowSize";
 import ComboBox from "../Cbbox/ComboBox";
-import GlobalContext from "../../context/GlobalContext";
+import GlobalContext from "../../context/GlobalContext/GlobalContext";
 import SearchModal from "../Modal/SearchModal";
 import { listTheater, subnav } from "../../constants/header";
 

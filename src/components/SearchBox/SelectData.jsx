@@ -1,6 +1,6 @@
 import React from "react";
 
-const SelectData = ({ list }) => {
+const SelectData = ({ list, status }) => {
   return (
     <div className="bg-gray-100 rounded-sm absolute left-0 md:top-18 lg:top-12 backdrop-blur-xl pl-1 shadow-2xl w-full">
       {list.map((item, index) => (

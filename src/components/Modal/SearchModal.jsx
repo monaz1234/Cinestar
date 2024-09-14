@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import GlobalContext from "../../context/GlobalContext";
+import GlobalContext from "../../context/GlobalContext/GlobalContext";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const SearchModal = () => {

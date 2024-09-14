@@ -10,12 +10,6 @@ import {
 import SelectData from "./SelectData";
 
 const SearchBox = () => {
-  // const [data, setData] = useState({
-  //   theater: "",
-  //   film: "",
-  //   date: "",
-  //   time: "",
-  // });
   const [statusData, setStatusData] = useState({
     theater: false,
     film: false,
@@ -24,18 +18,9 @@ const SearchBox = () => {
   });
 
   const selectData = () => {
-    // setStatusData((prevState) => ({
-    //   // ...prevState, // Giữ lại các giá trị khác trong state
-    //   theater: !prevState.theater, // Đảo ngược giá trị theater
-    // }));
-    console.log(statusData.theater);
-    
-
     setStatusData((prevState) => ({
+      ...prevState, 
       theater: !prevState.theater,
-      film: !prevState.film,
-      date: !prevState.date,
-      time: !prevState.time,
     }));
   };
 
@@ -49,7 +34,7 @@ const SearchBox = () => {
             <ChevronDownIcon className="w-4 ml-2" />
           </div>
           {/* List */}
-          {statusData.theater && <SelectData list={listTheater} />}
+          {statusData.theater && <SelectData list={listTheater} status={statusData.theater} />}
         </div>
         <div className="relative">
           <div className="select-data-btn">
