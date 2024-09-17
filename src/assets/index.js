@@ -22,6 +22,10 @@ import TicketIcon from './ticket-icon.svg';
 import UserIcon from './user-icon.svg';
 import ZaloIcon from './zalo-icon.webp';
 import BurgerBar from './burger-bar.png'
+import FilmTest1 from './Filmtest/f1.webp'
+import FilmTest2 from './Filmtest/f2.jpg'
+import FilmTest3 from './Filmtest/f3.jpg'
+import FilmTest4 from './Filmtest/f4.jpg'
 
 
 
@@ -49,5 +53,9 @@ export {
     TicketIcon,
     UserIcon,
     ZaloIcon,
-    BurgerBar
+    BurgerBar,
+    FilmTest1,
+    FilmTest2,
+    FilmTest3,
+    FilmTest4
 }

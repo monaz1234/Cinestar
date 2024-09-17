@@ -6,7 +6,7 @@ import SearchContextWrapper from "./context/SearchContext/SearchContextWrapper";
 
 function App() {
   return (
-    <div className="bg-cinestar-black md:px-2">
+    <div className="bg-cinestar-black xs:px-1 md:px-2">
       <Header />
       <Slider />
       <SearchContextWrapper>
