@@ -4,21 +4,18 @@ import SearchBox from "./components/SearchBox/SearchBox";
 import Slider from "./components/Slider/Slider";
 import SearchContextWrapper from "./context/SearchContext/SearchContextWrapper";
 import AppRouter from "./routers/AppRouter";
-import { BrowserRouter } from 'react-router-dom'; // Thêm dòng này
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="bg-cinestar-black md:px-2">
-        <Header />
-        <Slider />
-        <SearchContextWrapper>
-          <SearchBox />
-        </SearchContextWrapper>
-        <AppRouter />
-        <Now />
-      </div>
-    </BrowserRouter>
+    <div className="bg-cinestar-black md:px-2">
+      <Header />
+      <Slider />
+      <SearchContextWrapper>
+        <SearchBox />
+      </SearchContextWrapper>
+      <AppRouter/>
+      <Now />
+    </div>
   );
 }
 
