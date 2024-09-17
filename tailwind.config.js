@@ -35,7 +35,7 @@ export default {
           },
         },
         ".select-data-btn": {
-          "@apply border border-cinestar-purple rounded-md text-[16px] flex  p-2 bg-white font-bold overflow-hidden text-ellipsis whitespace-nowrap": {},
+          "@apply border border-cinestar-purple rounded-md text-[16px] flex  px-2 py-3  bg-white font-bold overflow-hidden text-ellipsis whitespace-nowrap": {},
         },
       });
     }),

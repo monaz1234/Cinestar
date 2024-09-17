@@ -75,16 +75,12 @@ const SelectData = ({ list, id }) => {
   }, [searchData]);
 
   return (
-    <div
-      className="bg-gray-100 rounded-sm absolute left-0 md:top-18 lg:top-12 backdrop-blur-xl shadow-2xl w-full"
-      id={id}
-    >
+    <div className="bg-gray-100 rounded-sm absolute left-0 md:top-19 lg:top-14 backdrop-blur-xl shadow-2xl w-full z-[11]">
       {list.map((item, index) => (
         <div
           key={index}
           className="hover:bg-gray-300 flex items-center pl-1 cursor-pointer py-1 border-b border-gray-300 h-[55px]"
           onClick={() => handleSelect(item, id)}
-          group={id}
         >
           {item}
         </div>

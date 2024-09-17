@@ -22,14 +22,18 @@ const SearchBox = () => {
 
   return (
     <div className="xl:p-4 lg:p-3 md:p-2 xs:p-1">
-      <div className="relative lg:w-[95%] md:w-[85%] xl:p-4 lg:p-3 md:p-2 xs:p-1 rounded-md grid md:grid-cols-6 items-center gap-4 m-auto bg-blue-100">
-        <div className="text-[18px] uppercase font-extrabold">Đặt nhanh</div>
+      <div className="relative lg:w-[95%] md:w-[85%] xl:p-4 lg:p-3 md:p-2 xs:p-1 rounded-md grid lg:grid-cols-6 items-center gap-4 m-auto bg-blue-100">
+        <div className="lg:text-[18px] text-[24px] uppercase font-extrabold lg:text-left text-center">
+          Đặt nhanh
+        </div>
         <div className="relative">
           <div
             className="select-data-btn cursor-pointer"
             onClick={() => openList("theater", statusData.theater)}
           >
-            {searchData.theater ? searchData.theater : "1. Chọn rạp"}
+            <span className="truncate">
+              {searchData.theater ? searchData.theater : "1. Chọn rạp"}
+            </span>
             <ChevronDownIcon className="w-4 ml-2" />
           </div>
           {/* List */}
@@ -37,10 +41,14 @@ const SearchBox = () => {
         </div>
         <div className="relative">
           <div
-            className="select-data-btn"
+            className={`select-data-btn ${
+              searchData.theater !== "" ? "cursor-pointer" : ""
+            }`}
             onClick={() => openList("film", statusData.film)}
           >
-            {searchData.film ? searchData.film :'2. Chọn phim'}
+            <span className="truncate">
+              {searchData.film ? searchData.film : "2. Chọn phim"}
+            </span>
             <ChevronDownIcon className="w-4 ml-2" />
           </div>
           {/* List */}
@@ -48,10 +56,14 @@ const SearchBox = () => {
         </div>
         <div className="relative">
           <div
-            className="select-data-btn"
+            className={`select-data-btn ${
+              searchData.film !== "" ? "cursor-pointer" : ""
+            }`}
             onClick={() => openList("date", statusData.date)}
           >
-            {searchData.date ? searchData.date :'3. Chọn ngày'}
+            <span className="truncate">
+              {searchData.date ? searchData.date : "3. Chọn ngày"}
+            </span>
             <ChevronDownIcon className="w-4 ml-2" />
           </div>
           {/* List */}
@@ -59,10 +71,14 @@ const SearchBox = () => {
         </div>
         <div className="relative">
           <div
-            className="select-data-btn"
+            className={`select-data-btn ${
+              searchData.date !== "" ? "cursor-pointer" : ""
+            }`}
             onClick={() => openList("time", statusData.time)}
           >
-            {searchData.time ? searchData.time :'4. Chọn suất'}
+            <span className="truncate">
+              {searchData.time ? searchData.time : "4. Chọn suất"}
+            </span>
             <ChevronDownIcon className="w-4 ml-2" />
           </div>
           {/* List */}
@@ -72,7 +88,7 @@ const SearchBox = () => {
         {/* Button booking */}
         <Button
           text="Đặt ngay"
-          className="button bg-cinestar-gold w-[125px] h-[40px] mr-3 group hover:text-white"
+          className="button bg-cinestar-gold w-full h-[50px] mr-3 group hover:text-white text-[16px]"
           colorChange="bg-cinestar-orange"
         />
       </div>
