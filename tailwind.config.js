@@ -23,7 +23,8 @@ export default {
         "cinestar-blue": "#0056b3", // Màu xanh
         "cinestar-red": "#e50914", // Màu đỏ
         "cinestar-purple": "#663399", //Màu tím
-        'cinestar-orange': '#FF7201'
+        'cinestar-orange': '#FF7201',
+        "cinestar-black-opacity": "rgba(15, 23, 42, 0.7)",
       },
     },
   },
