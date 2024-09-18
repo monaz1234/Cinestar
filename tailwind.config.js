@@ -11,6 +11,10 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
+    backgroundImage: {
+      'blur-right': "url('/assets/blur-right.webp')",
+      'blur-left': "url('/assets/blur-left.webp')",
+    },
     fontFamily: {
       'title': ["Anton", "sans-serif"],
     }
@@ -42,6 +46,9 @@ export default {
         ".select-data-btn": {
           "@apply border border-cinestar-purple rounded-md text-[16px] flex  px-2 py-3  bg-white font-bold overflow-hidden text-ellipsis whitespace-nowrap": {},
         },
+        ".heading": {
+          "@apply text-4xl font-title tracking-wide uppercase" : {},
+        }
       });
     }),
   ],

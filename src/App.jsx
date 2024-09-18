@@ -1,6 +1,7 @@
 import ComingSoon from "./components/ComingSoon/ComingSoon";
 import Header from "./components/Header/Header";
 import Now from "./components/Now/Now";
+import Promotion from "./components/Promotion/Promotion";
 import SearchBox from "./components/SearchBox/SearchBox";
 import Slider from "./components/Slider/Slider";
 import SearchContextWrapper from "./context/SearchContext/SearchContextWrapper";
@@ -15,6 +16,7 @@ function App() {
       </SearchContextWrapper>
       <Now />
       <ComingSoon />
+      <Promotion />
     </div>
   );
 }

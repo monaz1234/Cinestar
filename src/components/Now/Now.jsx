@@ -42,7 +42,7 @@ const Now = () => {
   return (
     <div className="w-full py-20 lg:px-20 md:px-5 xs:px-2">
       <div className="flex flex-col items-center">
-        <div className="text-4xl font-title tracking-wide text-gray-100 uppercase pb-4">
+        <div className="heading text-gray-100 pb-4">
           Phim đang chiếu
         </div>
         <div className="relative w-full">

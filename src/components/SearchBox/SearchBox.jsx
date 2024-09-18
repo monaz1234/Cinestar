@@ -23,7 +23,7 @@ const SearchBox = () => {
   return (
     <div className="xl:p-4 lg:p-3 md:p-2 xs:p-1">
       <div className="relative lg:w-[95%] md:w-[85%] xl:p-4 lg:p-3 md:p-2 xs:p-1 rounded-md grid lg:grid-cols-6 items-center gap-4 m-auto bg-blue-100">
-        <div className="xl:text-[26px] lg:text-[22px] text-[28px] text-gray-700 tracking-wider font-title uppercase lg:text-left text-center">
+        <div className="xl:text-[26px] lg:text-[22px] text-[28px] text-gray-700 heading lg:text-left text-center">
           Đặt vé nhanh
         </div>
         <div className="relative">
