@@ -1,4 +1,5 @@
 import ComingSoon from "./components/ComingSoon/ComingSoon";
+import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Now from "./components/Now/Now";
 import Promotion from "./components/Promotion/Promotion";
@@ -17,6 +18,7 @@ function App() {
       <Now />
       <ComingSoon />
       <Promotion />
+      <Contact />
     </div>
   );
 }

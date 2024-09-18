@@ -31,13 +31,13 @@ const Header = () => {
               icon={TicketIcon}
               className="button md:button bg-cinestar-gold w-[125px] h-[40px] mr-3 hidden group hover:text-white"
               text="Đặt vé ngay"
-              colorChange="bg-cinestar-blue"
+              colorChange="bg-purple-blue-gradient"
             />
             <Button
               icon={Popcorn}
               className="button md:button bg-cinestar-purple w-[125px] h-[40px] text-white hidden group"
               text="Đặt bắp nước"
-              colorChange="bg-cinestar-orange"
+              colorChange="bg-orange-yellow-gradient"
             />
           </div>
           {/* Search bar */}

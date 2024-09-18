@@ -12,13 +12,12 @@ export default {
       xl: "1280px",
     },
     backgroundImage: {
-      'blur-right': "url('/assets/blur-right.webp')",
-      'blur-left': "url('/assets/blur-left.webp')",
+      "blur-right": "url('/assets/blur-right.webp')",
+      "blur-left": "url('/assets/blur-left.webp')",
     },
     fontFamily: {
-      'title': ["Anton", "sans-serif"],
-    }
-    ,
+      title: ["Anton", "sans-serif"],
+    },
     extend: {
       colors: {
         "cinestar-black": "#0f172a", // Màu nền chính
@@ -27,8 +26,12 @@ export default {
         "cinestar-blue": "#0056b3", // Màu xanh
         "cinestar-red": "#e50914", // Màu đỏ
         "cinestar-purple": "#663399", //Màu tím
-        'cinestar-orange': '#FF7201',
+        "cinestar-orange": "#FF7201",
         "cinestar-black-opacity": "rgba(15, 23, 42, 0.7)",
+      },
+      backgroundImage: {
+        "purple-blue-gradient": "linear-gradient(to right, #7b2cbf, #4a90e2)",
+        "orange-yellow-gradient": "linear-gradient(to right, #ffa500, #ff4500)",
       },
     },
   },
@@ -44,11 +47,12 @@ export default {
           },
         },
         ".select-data-btn": {
-          "@apply border border-cinestar-purple rounded-md text-[16px] flex  px-2 py-3  bg-white font-bold overflow-hidden text-ellipsis whitespace-nowrap": {},
+          "@apply border border-cinestar-purple rounded-md text-[16px] flex  px-2 py-3  bg-white font-bold overflow-hidden text-ellipsis whitespace-nowrap":
+            {},
         },
         ".heading": {
-          "@apply text-4xl font-title tracking-wide uppercase" : {},
-        }
+          "@apply text-4xl font-title tracking-wide uppercase": {},
+        },
       });
     }),
   ],

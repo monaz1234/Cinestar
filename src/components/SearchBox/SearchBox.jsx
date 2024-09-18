@@ -89,7 +89,7 @@ const SearchBox = () => {
         <Button
           text="Đặt ngay"
           className="button bg-cinestar-gold w-full h-[50px] mr-3 group hover:text-white text-[16px]"
-          colorChange="bg-cinestar-orange"
+          colorChange="bg-purple-blue-gradient"
         />
       </div>
     </div>

@@ -55,7 +55,7 @@ const Movie = ({ film }) => {
           <Button
             className="button bg-cinestar-gold w-[125px] h-[40px] font-title text-[14px] group hover:text-white hover:duration-300"
             text="Đặt vé"
-            colorChange="bg-cinestar-orange"
+            colorChange="bg-orange-yellow-gradient"
           ></Button>
         </div>
       </div>
