@@ -1,3 +1,4 @@
+import ComingSoon from "./components/ComingSoon/ComingSoon";
 import Header from "./components/Header/Header";
 import Now from "./components/Now/Now";
 import SearchBox from "./components/SearchBox/SearchBox";
@@ -13,6 +14,7 @@ function App() {
         <SearchBox />
       </SearchContextWrapper>
       <Now />
+      <ComingSoon />
     </div>
   );
 }

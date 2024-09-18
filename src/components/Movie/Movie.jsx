@@ -8,7 +8,7 @@ const Movie = ({ film }) => {
     <div className="flex flex-col w-full p-2">
       {/* Poster */}
       <div className="basis-3/4 cursor-pointer relative">
-        <img src={film.poster} alt="poster" className="rounded-md h-[400px]" />
+        <img src={film.poster} alt="poster" className="rounded-md h-[400px] flex m-auto md:block" />
         {/* Detail */}
         <div className="flex flex-col justify-evenly absolute left-0 top-0 bg-cinestar-black-opacity transition-all duration-300 hover:translate-y-0 translate-y-3 w-full h-full text-white pl-2 opacity-0 hover:opacity-100 after:absolute after:top-[400px] after:left-0 after:w-full after:h-20">
           <div className="text-[28px] font-semibold text-center">{film.name}</div>

@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
-import { filmList } from "../../constants/movie";
+import { comingList } from "../../constants/movie";
 import Movie from "../Movie/Movie";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Slider from "react-slick";
-import "./now.css";
+import "./comingSoon.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Now = () => {
+const ComingSoon = () => {
   const sliderRef = useRef(null);
 
   const settings = {
@@ -55,7 +55,7 @@ const Now = () => {
           {/* Slider */}
           <div className="w-[90%] flex m-auto">
             <Slider {...settings} ref={sliderRef} className="w-full">
-              {filmList.map((film) => (
+              {comingList.map((film) => (
                 <Movie film={film} />
               ))}
             </Slider>
@@ -72,4 +72,4 @@ const Now = () => {
   );
 };
 
-export default Now;
+export default ComingSoon;
