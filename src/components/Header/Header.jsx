@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   CinestarLogo,
   Popcorn,
@@ -92,7 +93,12 @@ const Header = () => {
               <item.icon className="w-5 h-5 text-white group-hover:text-cinestar-gold" />
             )}
             <span className="transition duration-300 group-hover:text-cinestar-gold">
-              {item.name}
+              <Link
+                to={item.Link} // Điều hướng đến đường dẫn được chỉ định trong item.link
+                className="transition duration-300 group-hover:text-cinestar-gold"
+              >
+                {item.name}
+              </Link>
             </span>
 
             {/* Hiển thị listTheater khi hover */}

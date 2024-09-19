@@ -1,4 +1,5 @@
 import { MapPinIcon } from '@heroicons/react/24/outline';
+import { Link } from "react-router-dom";
 
 const subnav = [
     {
@@ -10,6 +11,7 @@ const subnav = [
     },
     {
         name: "Giới thiệu",
+        Link: "/about", // Dẫn đến trang giới thiệu
     }
     
 ];
