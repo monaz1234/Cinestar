@@ -55,8 +55,8 @@ const ComingSoon = () => {
           {/* Slider */}
           <div className="w-[90%] flex m-auto">
             <Slider {...settings} ref={sliderRef} className="w-full">
-              {comingList.map((film) => (
-                <Movie film={film} />
+              {comingList.map((film, index) => (
+                <Movie film={film} key={index} />
               ))}
             </Slider>
           </div>

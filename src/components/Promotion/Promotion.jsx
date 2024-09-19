@@ -3,6 +3,7 @@ import { Km2, Km3 } from "../../assets";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./promotion.css"
 
 const Promotion = () => {
 const settings = {

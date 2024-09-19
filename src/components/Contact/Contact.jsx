@@ -4,7 +4,7 @@ import { FbIcon, ZaloIcon } from "../../assets";
 
 const Contact = () => {
   return <div className="py-20">
-    <div className="grid md:grid-cols-2 grid-cols-1 grid-rows-2 gap-4 px-4">
+    <div className="grid md:grid-cols-2 grid-rows-2 grid-cols-1 md:grid-rows-1 gap-4 px-4">
         <div className="grid grid-rows-3 gap-4">
             <div className="heading text-gray-100 text-center flex m-auto">Liên hệ với chúng tôi</div>
             <div className="relative">
