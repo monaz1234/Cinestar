@@ -55,8 +55,8 @@ const Now = () => {
           {/* Slider */}
           <div className="w-[90%] flex m-auto">
             <Slider {...settings} ref={sliderRef} className="w-full">
-              {filmList.map((film, index) => (
-                <Movie key={index} film={film} />
+              {filmList.map((film) => (
+                <Movie key={film.id} film={film} />
               ))}
             </Slider>
           </div>

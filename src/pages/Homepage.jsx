@@ -7,6 +7,7 @@ import ComingSoon from "../components/ComingSoon/ComingSoon";
 import Promotion from "../components/Promotion/Promotion";
 import Contact from "../components/Contact/Contact";
 import Slider from "../components/Slider/Slider";
+import { Outlet } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
         <SearchBox />
       </SearchContextWrapper>
       <Now />
+      <Outlet />
       <ComingSoon />
       <Promotion />
       <Contact />
